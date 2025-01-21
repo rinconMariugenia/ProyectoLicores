@@ -1,0 +1,30 @@
+Proceso crear git y enviar un commit:
+git init
+git add .
+git commit -m "Primer commit"
+git branch -M main
+git remote add origin https://github.com/rinconMariugenia/ProyectoLicores.git
+git push -u origin main
+
+
+Si quiero ignorar archivos .csv debo después del git init crear en la raíz del proyecto donde hice git init, un archivo llamado .gitignore y allí dentro escribir solo:*.csv
+
+LUEGO DE MODIFICAR UN ARCHIVO:
+git status (muestra los archivos que se modificaron en rojo y no se han enviado a GitHub)
+git add . (los prepara para ser enviados al commit)
+git commit -m "mensaje" (mensaje en el envío)
+git push -u origin main (hace el envío)
+
+TRABAJO EN EQUIPO CON GITHUB:
+Ir al repositorio en GitHub, click en Settings que está arriba en la cinta de pestañas.
+Ir a Collaborators, agregar colaboradores usando su username o su email.
+Ir a Branches, para proteger la rama principal, se pueden colocar reglas para esto. Una regla puede ser esperar dos aprobaciones para hacer el merge.
+Se crea la rama en python co consola con: git checkout -b nombreDeRama, eso la crea y nos coloca en esa rama, al hacer cualquier cambio ahora,
+ se guardará en esa rama. Despues de pushear un commit aquí ( se pushea con: git push -u origin nombreDeRama), se genera un Pull Request en GitHub, 
+se le da click a crear pull request que está abajo,
+despues hay que esperar a que se cumpla la condicion que se creó en la proteccion de rama para poder ver el cambio en el repositorio.
+Despues de que se cumple la condicion, aparece un boton llamado Merge Pull Request, damos click, luego click en Confirm Merge, y listo.
+
+PARA TRAER A MI VSC LOS CAMBIOS HECHOS POR OTROS EN EL REPOSITORIO, ME POSICIONO EN LA RAMA main (git checkout main) Y EJECUTO git pull
+
+
